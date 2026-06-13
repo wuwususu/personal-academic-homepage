@@ -16,6 +16,7 @@
         <a class="brand" href="#top">Wushu Chen</a>
         <div class="nav-links">
           <a href="#about">About</a>
+          <a href="#contributions">Contributions</a>
           <a href="#publications">Publications</a>
           <a href="#contact">Contact</a>
         </div>
@@ -87,6 +88,54 @@
             <li>Machine-learning-assisted clinical diagnosis and decision support</li>
             <li>Future PhD direction in ophthalmology and visual health</li>
           </ul>
+        </div>
+      </section>
+
+      <section id="contributions" class="section contributions-section">
+        <div class="section-heading">
+          <p class="eyebrow">Major Contributions</p>
+          <h2>Selected Research Output</h2>
+        </div>
+        <div class="contribution-shell" data-contribution-carousel>
+          <div class="contribution-tabs" role="tablist" aria-label="Major contributions">
+            <button class="contribution-tab active" type="button" data-slide="0" aria-selected="true">
+              Guideline
+            </button>
+          </div>
+          <div class="contribution-stack">
+            <article class="contribution-card active" data-contribution-slide="0">
+              <div class="contribution-copy">
+                <p class="tag">Guideline Development</p>
+                <h3>Diagnosis and Treatment Guideline for Invasive Pulmonary Fungal Disease (2025 Edition)</h3>
+                <p>
+                  Participated in the writing process for a national clinical guideline on invasive
+                  pulmonary fungal disease, contributing to evidence translation for respiratory and
+                  infectious disease diagnosis and treatment.
+                </p>
+                <dl class="contribution-meta">
+                  <div>
+                    <dt>Role</dt>
+                    <dd>Writing secretariat contributor</dd>
+                  </div>
+                  <div>
+                    <dt>Field</dt>
+                    <dd>Respiratory medicine, infectious disease, clinical guideline</dd>
+                  </div>
+                  <div>
+                    <dt>Journal</dt>
+                    <dd>Chinese Journal of Tuberculosis and Respiratory Diseases, 2025</dd>
+                  </div>
+                </dl>
+                <a href="assets/publications/invasive-fungal-guideline.pdf">Open Guideline PDF</a>
+              </div>
+              <figure class="contribution-preview">
+                <img
+                  src="assets/contributions/invasive-fungal-guideline-2025.png"
+                  alt="Preview of the 2025 invasive pulmonary fungal disease guideline"
+                >
+              </figure>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -191,6 +240,25 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      document.querySelectorAll("[data-contribution-carousel]").forEach((carousel) => {
+        const tabs = Array.from(carousel.querySelectorAll("[data-slide]"));
+        const slides = Array.from(carousel.querySelectorAll("[data-contribution-slide]"));
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const target = tab.dataset.slide;
+            tabs.forEach((item) => {
+              const active = item.dataset.slide === target;
+              item.classList.toggle("active", active);
+              item.setAttribute("aria-selected", String(active));
+            });
+            slides.forEach((slide) => {
+              slide.classList.toggle("active", slide.dataset.contributionSlide === target);
+            });
+          });
+        });
+      });
     </script>
   </body>
 </html>
