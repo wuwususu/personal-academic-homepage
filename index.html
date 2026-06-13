@@ -129,10 +129,21 @@
                 <a href="assets/publications/invasive-fungal-guideline.pdf">Open Guideline PDF</a>
               </div>
               <figure class="contribution-preview">
-                <img
-                  src="assets/contributions/invasive-fungal-guideline-2025.png"
-                  alt="Preview of the 2025 invasive pulmonary fungal disease guideline"
-                >
+                <div class="image-stack" data-image-stack>
+                  <button class="stack-image active" type="button" data-image-index="0" aria-label="Show guideline contribution details">
+                    <img
+                      src="assets/contributions/guideline-title-page.png"
+                      alt="Title page preview of the 2025 invasive pulmonary fungal disease guideline"
+                    >
+                  </button>
+                  <button class="stack-image" type="button" data-image-index="1" aria-label="Show guideline title page">
+                    <img
+                      src="assets/contributions/guideline-writing-secretariat.png"
+                      alt="Writing secretariat, conflict of interest, and acknowledgement section preview"
+                    >
+                  </button>
+                </div>
+                <figcaption>Click the image to switch views.</figcaption>
               </figure>
             </article>
           </div>
@@ -256,6 +267,25 @@
             slides.forEach((slide) => {
               slide.classList.toggle("active", slide.dataset.contributionSlide === target);
             });
+          });
+        });
+      });
+
+      document.querySelectorAll("[data-image-stack]").forEach((stack) => {
+        const images = Array.from(stack.querySelectorAll("[data-image-index]"));
+
+        const activate = (index) => {
+          images.forEach((image, imageIndex) => {
+            image.classList.toggle("active", imageIndex === index);
+          });
+        };
+
+        images.forEach((image, imageIndex) => {
+          image.addEventListener("click", () => {
+            const nextIndex = image.classList.contains("active")
+              ? (imageIndex + 1) % images.length
+              : imageIndex;
+            activate(nextIndex);
           });
         });
       });

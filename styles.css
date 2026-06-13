@@ -184,6 +184,7 @@ dd {
 .section {
   padding: 76px 0;
   border-top: 1px solid var(--line);
+  scroll-margin-top: 88px;
 }
 
 .section-heading {
@@ -256,7 +257,7 @@ dd {
 
 .contribution-stack {
   position: relative;
-  min-height: 520px;
+  min-height: 680px;
 }
 
 .contribution-card {
@@ -320,21 +321,65 @@ dd {
 }
 
 .contribution-preview {
+  position: relative;
   min-width: 0;
   margin: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: #eef1ed;
+  padding: 0 22px 30px 0;
 }
 
-.contribution-preview img {
+.image-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+}
+
+.stack-image {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  max-height: 620px;
-  object-fit: cover;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(22, 32, 27, 0.13);
+  cursor: pointer;
+  overflow: hidden;
+  transform: translate(22px, 24px) scale(0.965);
+  transition: transform 200ms ease, opacity 200ms ease, box-shadow 200ms ease;
+  opacity: 0.74;
+}
+
+.stack-image.active {
+  z-index: 2;
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+  box-shadow: 0 18px 44px rgba(22, 32, 27, 0.17);
+}
+
+.stack-image:not(.active) {
+  z-index: 1;
+}
+
+.stack-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   object-position: top center;
+}
+
+.contribution-preview figcaption {
+  position: absolute;
+  right: 24px;
+  bottom: 0;
+  left: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: right;
 }
 
 .publication-list {
@@ -439,8 +484,9 @@ dd {
     gap: 20px;
   }
 
-  .contribution-preview img {
+  .image-stack {
     height: 420px;
+    min-height: 420px;
   }
 
   .publication.featured img {
@@ -475,7 +521,12 @@ dd {
     padding: 18px;
   }
 
-  .contribution-preview img {
+  .image-stack {
     height: 360px;
+    min-height: 360px;
+  }
+
+  .stack-image {
+    transform: translate(14px, 16px) scale(0.965);
   }
 }
