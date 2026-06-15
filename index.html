@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Wushu Chen academic homepage: research profile, selected publications, and contact information."
+      content="Wushu Chen academic homepage: research profile, major contributions, selected publications, and contact information."
     >
     <title>Wushu Chen | Academic Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="preview.css">
   </head>
-  <body>
-    <header class="site-header">
+  <body class="preview-page">
+    <header class="site-header preview-header">
       <nav class="nav" aria-label="Primary navigation">
         <a class="brand" href="#top">Wushu Chen</a>
         <div class="nav-links">
-          <a href="#about">About</a>
           <a href="#contributions">Contributions</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#about">About</a>
           <a href="#publications">Publications</a>
           <a href="#contact">Contact</a>
         </div>
@@ -24,79 +26,147 @@
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Academic Homepage</p>
-          <h1>Wushu Chen</h1>
-          <p class="lead">
-            Clinical researcher with a background in respiratory medicine, infectious diseases,
-            evidence synthesis, and data-driven diagnosis, preparing to pursue PhD training in ophthalmology.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#publications">View Publications</a>
-            <a class="button secondary" href="#contact">Contact</a>
-          </div>
+      <section class="animated-hero">
+        <div class="hero-badge">
+          <a href="#contributions">Major contribution <span aria-hidden="true">-></span></a>
         </div>
-        <aside class="profile-panel" aria-label="Profile summary">
-          <img class="profile-photo" src="assets/profile/wushu-chen.png" alt="Portrait of Wushu Chen">
-          <dl>
-            <div>
-              <dt>Name</dt>
-              <dd>Wushu Chen</dd>
-            </div>
-            <div>
-              <dt>Current Direction</dt>
-              <dd>Ophthalmology PhD training, clinical epidemiology, translational research</dd>
-            </div>
-            <div>
-              <dt>Research Methods</dt>
-              <dd>Systematic review, meta-analysis, Mendelian randomization, machine learning</dd>
-            </div>
-            <div>
-              <dt>ORCID</dt>
-              <dd><a href="https://orcid.org/0009-0003-0033-6823">0009-0003-0033-6823</a></dd>
-            </div>
-          </dl>
-        </aside>
+        <div class="animated-title">
+          <h1>
+            <span>A researcher in</span>
+            <span class="word-rotator" aria-live="polite">
+              <span class="word active">respiratory medicine</span>
+              <span class="word">infectious disease</span>
+              <span class="word">evidence synthesis</span>
+              <span class="word">ophthalmology</span>
+              <span class="word">data-driven diagnosis</span>
+            </span>
+          </h1>
+          <p>
+            Wushu Chen works across clinical epidemiology, guideline development,
+            systematic evidence synthesis, and machine-learning-assisted diagnosis,
+            with a future PhD direction in ophthalmology and visual health.
+          </p>
+        </div>
+        <div class="animated-actions">
+          <a class="button secondary" href="mailto:chenwooshu@gmail.com">Contact</a>
+          <a class="button primary" href="#publications">View Publications <span aria-hidden="true">-></span></a>
+        </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="section-heading">
+      <section id="about" class="section preview-section">
+        <div class="section-heading centered-heading">
           <p class="eyebrow">About</p>
           <h2>Research Profile</h2>
         </div>
-        <div class="about-grid">
-          <p>
-            My previous research has focused on respiratory and infectious disease questions,
-            including differential diagnosis, pulmonary disease, invasive fungal disease, and
-            immune-related clinical topics. I have contributed to research supported by China's
-            National Science and Technology Major Project for 2030 and participated in clinical
-            guideline development, which shaped my interest in translating evidence into practical
-            standards for diagnosis and care. I work across clinical epidemiology and evidence-based
-            medicine, using systematic reviews, meta-analyses, Mendelian randomization, and
-            machine-learning approaches to connect clinical observations with reproducible evidence.
-            Building on this respiratory research background, I am preparing for PhD study in
-            ophthalmology, where I hope to apply rigorous clinical research methods and data-driven
-            tools to eye disease, visual health, and translational questions in ophthalmic care.
-          </p>
-          <ul class="highlights">
-            <li>Research experience connected to China's National Science and Technology Major Project for 2030</li>
-            <li>Participation in clinical guideline development and evidence translation</li>
-            <li>Respiratory medicine and infectious disease research experience</li>
-            <li>Evidence synthesis through systematic review and meta-analysis</li>
-            <li>Genetic epidemiology and Mendelian randomization studies</li>
-            <li>Machine-learning-assisted clinical diagnosis and decision support</li>
-            <li>Future PhD direction in ophthalmology and visual health</li>
-          </ul>
+        <div class="profile-preview-grid">
+          <aside class="profile-panel">
+            <img class="profile-photo" src="assets/profile/wushu-chen.png" alt="Portrait of Wushu Chen">
+            <dl>
+              <div>
+                <dt>Name</dt>
+                <dd>Wushu Chen</dd>
+              </div>
+              <div>
+                <dt>Current Direction</dt>
+                <dd>Ophthalmology PhD training, clinical epidemiology, translational research</dd>
+              </div>
+              <div>
+                <dt>ORCID</dt>
+                <dd><a href="https://orcid.org/0009-0003-0033-6823">0009-0003-0033-6823</a></dd>
+              </div>
+            </dl>
+          </aside>
+          <div class="about-card">
+            <p>
+              My previous research has focused on respiratory and infectious disease questions,
+              including differential diagnosis, pulmonary disease, invasive fungal disease, and
+              immune-related clinical topics. I have contributed to research supported by China's
+              National Science and Technology Major Project for 2030 and participated in clinical
+              guideline development, which shaped my interest in translating evidence into practical
+              standards for diagnosis and care.
+            </p>
+            <ul class="highlights">
+              <li>Research experience connected to China's National Science and Technology Major Project for 2030</li>
+              <li>Participation in clinical guideline development and evidence translation</li>
+              <li>Systematic review, meta-analysis, Mendelian randomization, and machine learning</li>
+              <li>Future PhD direction in ophthalmology and visual health</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section id="contributions" class="section contributions-section">
-        <div class="section-heading">
+      <section id="highlights" class="section preview-section highlight-showcase" data-highlight-carousel>
+        <div class="highlight-intro">
+          <div>
+            <p class="eyebrow">Research Highlights</p>
+            <h2>Evidence-oriented clinical research profile</h2>
+            <p>
+              A concise view of the research experiences and methods that connect respiratory
+              medicine, infectious disease, guideline development, and the next step toward ophthalmology.
+            </p>
+          </div>
+          <div class="highlight-dots" aria-label="Research highlight navigation">
+            <button class="highlight-dot active" type="button" data-highlight="0" aria-label="Show guideline highlight"></button>
+            <button class="highlight-dot" type="button" data-highlight="1" aria-label="Show methods highlight"></button>
+            <button class="highlight-dot" type="button" data-highlight="2" aria-label="Show ophthalmology highlight"></button>
+          </div>
+        </div>
+        <div class="highlight-card-wrap">
+          <article class="highlight-card active" data-highlight-card="0">
+            <div class="highlight-rating" aria-hidden="true">★★★★★</div>
+            <blockquote>
+              Contributed to work connected with China's National Science and Technology Major Project
+              for 2030 and participated in the writing process of a national clinical guideline for
+              invasive pulmonary fungal disease.
+            </blockquote>
+            <div class="highlight-separator"></div>
+            <div class="highlight-persona">
+              <img src="assets/profile/wushu-chen.png" alt="">
+              <div>
+                <h3>Guideline and Evidence Translation</h3>
+                <p>Respiratory medicine, infectious disease, clinical standards</p>
+              </div>
+            </div>
+          </article>
+          <article class="highlight-card" data-highlight-card="1">
+            <div class="highlight-rating" aria-hidden="true">★★★★★</div>
+            <blockquote>
+              Uses systematic review, meta-analysis, Mendelian randomization, and machine-learning
+              approaches to transform clinical questions into reproducible evidence.
+            </blockquote>
+            <div class="highlight-separator"></div>
+            <div class="highlight-persona">
+              <img src="assets/profile/wushu-chen.png" alt="">
+              <div>
+                <h3>Clinical Epidemiology Methods</h3>
+                <p>Evidence synthesis, genetic epidemiology, machine learning</p>
+              </div>
+            </div>
+          </article>
+          <article class="highlight-card" data-highlight-card="2">
+            <div class="highlight-rating" aria-hidden="true">★★★★★</div>
+            <blockquote>
+              Building on respiratory and infectious disease research, the next academic direction is
+              PhD training in ophthalmology, visual health, and data-driven translational research.
+            </blockquote>
+            <div class="highlight-separator"></div>
+            <div class="highlight-persona">
+              <img src="assets/profile/wushu-chen.png" alt="">
+              <div>
+                <h3>Future Ophthalmology Direction</h3>
+                <p>Ophthalmology PhD, visual health, translational research</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contributions" class="section preview-section">
+        <div class="section-heading centered-heading">
           <p class="eyebrow">Major Contributions</p>
           <h2>Selected Research Output</h2>
         </div>
-        <div class="contribution-shell" data-contribution-carousel>
+        <div class="contribution-shell preview-contribution" data-contribution-carousel>
           <div class="contribution-tabs" role="tablist" aria-label="Major contributions">
             <button class="contribution-tab active" type="button" data-slide="0" aria-selected="true">
               Guideline
@@ -143,15 +213,14 @@
                     >
                   </button>
                 </div>
-                <figcaption>Click the image to switch views.</figcaption>
               </figure>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="publications" class="section publications-section">
-        <div class="section-heading">
+      <section id="publications" class="section preview-section">
+        <div class="section-heading centered-heading">
           <p class="eyebrow">Selected Work</p>
           <h2>Publications and Research Materials</h2>
         </div>
@@ -232,12 +301,12 @@
         </div>
       </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="section-heading">
+      <section id="contact" class="section preview-section contact-section">
+        <div class="section-heading centered-heading">
           <p class="eyebrow">Contact</p>
           <h2>Get in Touch</h2>
         </div>
-        <div class="contact-grid">
+        <div class="contact-grid preview-contact">
           <a href="mailto:chenwooshu@gmail.com">chenwooshu@gmail.com</a>
           <a href="https://orcid.org/0009-0003-0033-6823">ORCID: 0009-0003-0033-6823</a>
           <a href="https://github.com/wuwususu">GitHub: wuwususu</a>
@@ -252,42 +321,44 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      document.querySelectorAll("[data-contribution-carousel]").forEach((carousel) => {
-        const tabs = Array.from(carousel.querySelectorAll("[data-slide]"));
-        const slides = Array.from(carousel.querySelectorAll("[data-contribution-slide]"));
-
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", () => {
-            const target = tab.dataset.slide;
-            tabs.forEach((item) => {
-              const active = item.dataset.slide === target;
-              item.classList.toggle("active", active);
-              item.setAttribute("aria-selected", String(active));
-            });
-            slides.forEach((slide) => {
-              slide.classList.toggle("active", slide.dataset.contributionSlide === target);
-            });
-          });
-        });
-      });
+      const words = Array.from(document.querySelectorAll(".word"));
+      let wordIndex = 0;
+      window.setInterval(() => {
+        words[wordIndex].classList.remove("active");
+        wordIndex = (wordIndex + 1) % words.length;
+        words[wordIndex].classList.add("active");
+      }, 2000);
 
       document.querySelectorAll("[data-image-stack]").forEach((stack) => {
         const images = Array.from(stack.querySelectorAll("[data-image-index]"));
-
         const activate = (index) => {
           images.forEach((image, imageIndex) => {
             image.classList.toggle("active", imageIndex === index);
           });
         };
-
         images.forEach((image, imageIndex) => {
           image.addEventListener("click", () => {
-            const nextIndex = image.classList.contains("active")
-              ? (imageIndex + 1) % images.length
-              : imageIndex;
-            activate(nextIndex);
+            activate(image.classList.contains("active") ? (imageIndex + 1) % images.length : imageIndex);
           });
         });
+      });
+
+      document.querySelectorAll("[data-highlight-carousel]").forEach((carousel) => {
+        const dots = Array.from(carousel.querySelectorAll("[data-highlight]"));
+        const cards = Array.from(carousel.querySelectorAll("[data-highlight-card]"));
+        let active = 0;
+
+        const activate = (index) => {
+          active = index;
+          dots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === active));
+          cards.forEach((card, cardIndex) => card.classList.toggle("active", cardIndex === active));
+        };
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => activate(index));
+        });
+
+        window.setInterval(() => activate((active + 1) % cards.length), 6000);
       });
     </script>
   </body>
